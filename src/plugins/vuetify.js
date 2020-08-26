@@ -9,20 +9,21 @@ export default new Vuetify({
         iconfont: 'fa',
     },
     theme: {
+        dark: true,
         themes: {
             light: {
-                primary: colors.blueGrey.darken3,
-                secondary: colors.grey.darken1,
+                primary: colors.blueGrey.base,
+                secondary: colors.blueGrey.darken4,
                 warning: colors.orange.accent3,
                 success: colors.green.accent3,
                 error: colors.red.accent3,
             },
             dark: {
-                primary: colors.blueGrey.darken1,
-                secondary: colors.grey.darken1,
+                primary: colors.blueGrey.base,
+                secondary: colors.blueGrey.darken4,
                 warning: colors.orange.accent3,
-                success: colors.green,
-                error: colors.red,
+                success: colors.green.accent3,
+                error: colors.red.accent3,
             },
         },
     },

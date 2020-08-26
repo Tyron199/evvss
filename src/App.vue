@@ -1,20 +1,21 @@
 <template>
   <v-app>
-    <side-navigation></side-navigation>
+    <side-navigation v-if="showNav"></side-navigation>
 
     <v-app-bar
       :clipped-left="$vuetify.breakpoint.lgAndUp"
       app
-      color="primary"
+      color="secondary"
       dark
       style="-webkit-app-region: drag"
     >
       <v-app-bar-nav-icon
+        v-if="showNav"
         style="-webkit-app-region: no-drag;"
         @click.stop="$store.state.side_navigation = !$store.state.side_navigation"
       ></v-app-bar-nav-icon>
       <v-toolbar-title style="width: 300px" class="ml-0 pl-4">
-        <span class="font-weight-bold">EVVSS</span>
+        <span class="font-weight-bold monster">EVVSS</span>
       </v-toolbar-title>
 
       <v-spacer></v-spacer>
@@ -32,15 +33,17 @@ import sideNavigation from "@/components/sideNavigation";
 import windowButtons from "@/components/windowButtons";
 export default {
   name: "App",
-
   components: {
     sideNavigation,
     windowButtons,
   },
-
   data: () => ({}),
   created() {},
-  computed: {},
+  computed: {
+    showNav() {
+      return !["Login"].includes(this.$route.name);
+    },
+  },
   methods: {},
 };
 </script>
@@ -48,7 +51,9 @@ export default {
 html {
   overflow: hidden !important;
 }
-
+.monster {
+  font-family: "Montserrat", sans-serif !important;
+}
 /* width */
 ::-webkit-scrollbar {
   width: 10px;

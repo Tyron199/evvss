@@ -70,7 +70,7 @@
           ></v-switch>
         </v-row>
 
-        <v-btn color="primary" block>Sign Out</v-btn>
+        <v-btn color="primary" block to="/login">Sign Out</v-btn>
       </div>
     </template>
   </v-navigation-drawer>
