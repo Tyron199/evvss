@@ -36,6 +36,7 @@ function createWindow() {
   win = new BrowserWindow({
     width: 1366,
     height: 768,
+    show: false,
     minWidth: 1024,
     minHeight: 768,
     frame: false,
@@ -56,6 +57,9 @@ function createWindow() {
     // Load the index.html when not in development
     win.loadURL('app://./index.html')
   }
+  win.on("ready-to-show", function () {
+    win.show()
+  })
 
   win.on('closed', () => {
     win = null

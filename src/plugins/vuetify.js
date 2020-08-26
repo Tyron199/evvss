@@ -14,16 +14,16 @@ export default new Vuetify({
             light: {
                 primary: colors.blueGrey.base,
                 secondary: colors.blueGrey.darken4,
-                warning: colors.orange.accent3,
-                success: colors.green.accent3,
-                error: colors.red.accent3,
+                warning: colors.orange.accent4,
+                success: colors.green.accent4,
+                error: colors.red.accent4
             },
             dark: {
                 primary: colors.blueGrey.base,
                 secondary: colors.blueGrey.darken4,
-                warning: colors.orange.accent3,
-                success: colors.green.accent3,
-                error: colors.red.accent3,
+                warning: colors.orange.accent4,
+                success: colors.green.accent4,
+                error: colors.red.accent4,
             },
         },
     },
